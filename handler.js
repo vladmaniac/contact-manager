@@ -1,5 +1,3 @@
-require("contacts.js");
-
 /**
  * Contacts class
  */
@@ -10,9 +8,6 @@ function Contact(id, name, email, birthday, optionalAddress) {
   this.birthday = birthday;
   this.optionalAddress = optionalAddress;
 };
-
-var contact = new Contact("0", "Vlad", "maniacvld@gmail.com", "03/02/1988", 
-                          "Decebal Street");
 
 Contact.prototype.editName = function(userAsObject, newValue, handler) {
   if(typeof(newValue) === "string") {
@@ -42,7 +37,7 @@ Contact.prototype.editOptionalAddress = function(userAsObject, newValue, handler
 };
 
 Contact.prototype.deleteContact = function(userAsObject, handler) {
-  if(confirm("Are you sure you want to delete '" + userAsObject.name + 
+  if(confirm("Are you sure you want to delete '" + userAsObject.name +
              "' from your contact list?")) {
     handler.deleteFromStorage(userAsObject);
   }
@@ -60,10 +55,12 @@ Handler.prototype.createUser = function(user) {
   console.log(JSON.stringify(user));  
 };
 
+// Get user as Object type from localStorage
 Handler.prototype.retrieveUser = function(user) {
   return JSON.parse(localStorage.getItem("user" + user.id));
 };
 
+// Delete contact entry from localStorage entirely
 Handler.prototype.deleteFromStorage = function(user) {
   var deletedUser = JSON.stringify(user);
 
@@ -72,16 +69,4 @@ Handler.prototype.deleteFromStorage = function(user) {
 
   delete deteledUser;
 };
-
-// A bit of testing
-var handler = new Handler();
-handler.createUser(contact);
-
-var userAsObject = handler.retrieveUser(contact);
-typeof(userAsObject);
-contact.editName(userAsObject, "Maria", handler);
-contact.editEmail(userAsObject, "maria@gmail.com", handler);
-contact.editBirthday(userAsObject, "04/05/1995", handler);
-contact.editOptionalAddress(userAsObject, "Main Street", handler);
-
 
