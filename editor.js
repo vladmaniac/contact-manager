@@ -95,6 +95,10 @@ Editor.prototype.displayItem = function(contact) {
     var editor = new Editor();
     editor.saveItem(contact);
   }, false);
+
+  // New lines
+  var space = doc.createElement("BR");
+  container.appendChild(space);
 }
 
 // Actually delete the item from storage and UI
