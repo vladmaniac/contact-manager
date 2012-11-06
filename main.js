@@ -1,5 +1,5 @@
 /**
- * Helper functions part
+ * Global functions part
  * addUser() - adds a user via the UI
  * displayAll() - displays all users in the content area
  */
