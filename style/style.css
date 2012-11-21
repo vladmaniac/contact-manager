@@ -1,0 +1,109 @@
+/* Input part */
+body {
+  background-image: url("pattern_096.gif");
+}
+
+.form {
+  display: inline-block;
+}
+
+.form .button {
+  display: inline-block;
+  height: 22px;
+  margin-top: 1px;
+  margin-left: 15px;
+}
+
+.button:hover {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+.form input {
+  font-family: "Comic Sans MS";
+  color: #1C1C1C;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+form, .form .button {
+  float: left;
+}
+
+#in-data {
+  width: 100%;
+  background-color: #0C63AC;
+  border-radius: 10px;
+  padding: 15px;
+  padding-top: 0.005em;
+  padding-right: 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  color: #1C1C1C;
+}
+
+img {
+  padding-top: 15px;
+  padding-right: 10px;
+}
+
+h1, img {
+  float:left;
+}
+
+/* Contact part */
+#contacts-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.oneContact {
+  border-radius: 10px;
+  background-color: #73b9e6;
+  width: 275px;
+  margin-left: -6px;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.oneContact:hover {
+  background-color: #0C63AC;
+}
+
+.oneContact:active {
+  background-color: #0C63AC;
+}
+
+.contactList {
+  margin-left: -10px;
+}
+
+.contactList li {
+  list-style: none;
+  display: block;
+  font-family: "Comic Sans MS";
+  color: #1C1C1C;
+  padding-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contactList li:hover {
+  overflow: visible;
+}
+
+.ops-buttons .button {
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.ops-buttons .button:first-child {
+  margin-left: 15px;
+}

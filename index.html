@@ -4,22 +4,35 @@
     <meta charset="utf-8">
     <meta http-equiv="pragma" content="no-cache">
 
-    <title>Contact Manager</title>
-    <h1>Contact Manager</h1>
-    <script type="text/javascript" src="handler.js"></script>
-    <script type="text/javascript" src="contacts.js"></script>
-    <script type="text/javascript" src="editor.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <title>TEST Contact Manager</title>
+    
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript" src="js/contacts.js"></script>
+    <script type="text/javascript" src="js/contact_manager.js"></script>
+    <script type="text/javascript" src="js/handler.js"></script>
+    <script type="text/javascript" src="js/render.js"></script>
+    <script type="text/javascript" src="js/ui-ops.js"></script>
+    <script type="text/javascript" src="js/main.js"></script> 
 </head>
 
 <body>
-    <form action="">
-      Name: <input type="text" name="name" id="name-field"><br>
-      E-mail: <input type="text" name="email" id="mail-field"><br>
-      Birthday: <input type="text" name="birthday" id="birth-field"><br>
-      Additional Address:  <input type="text" name="address" id="address-field"><br>
+ <div id="in-data">
+ <img src="res/logo.png" width="40" height="50">
+ <h1>Contact Manager</h1>
+ <div class="form">
+  <form action="">
+      <label for="name-field" id="name-label">Name:</label>
+      <input type="text" name="name" id="name-field">
+      <label for="mail-field" id="mail-label">E-mail:</label>
+      <input type="text" name="email" id="mail-field">
+      <label for="birth-field" id="birth-label">Birthday:</label>
+      <input type="date" name="birthday" id="birth-field">
+      <label for="address-field" id="address-label">Additional Address:</label>
+      <input type="text" name="address" id="address-field">
     </form>
-    <button onclick="addUser()">Add New</button>
+    <button id="add-button" class="button" onclick="add()">Add New</button>
+</div>
+ </div>
     <br></br>
     <div id="contacts-container">
     </div>
