@@ -17,6 +17,7 @@ body {
 .button:hover {
   background-color: #003768;
   color: white;
+  border-radius: 2px;
 }
 
 .button[disabled]:hover {
@@ -87,6 +88,7 @@ h1, img {
 
 .oneContact:hover {
   background-color: #0C63AC;
+  cursor: pointer;
 }
 
 .oneContact:active {
@@ -111,6 +113,7 @@ h1, img {
 
 .contactList li:hover {
   overflow: visible;
+  color: #bcd4e6;
 }
 
 .ops-buttons .button {
