@@ -11,7 +11,6 @@ Handler.prototype = {
     localStorage.clear();
 
     for (var i = 0; i < this.list.length; i++) {
-      this.list[i].id = i;
       localStorage.setItem("contact" + i, JSON.stringify(this.list[i]));
     }
   },
@@ -23,16 +22,17 @@ Handler.prototype = {
 
     for (var i = 0; i < localStorage.length; i++) {
       key = localStorage.key(i);
-      console.log(key);
       contactItems[i] = JSON.parse(localStorage.getItem(key));
     }
     return contactItems;
   },
 
-  deleteContact: function Handler_deleteContact(aContact) {
-    var contact = JSON.stringify(aContact);
-
-    localStorage.removeItem("contact" + aContact.id);
-    console.log("You have deleted --> " + contact);
+  // List all elements from localStorage to console
+  listItems: function Handler_listItems() {
+    for (var i = 0; i < localStorage.length; i++) {
+      key = localStorage.key(i);
+      console.log(localStorage.getItem(key));
+    }
   }
 };
+

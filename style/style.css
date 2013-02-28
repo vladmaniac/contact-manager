@@ -1,6 +1,6 @@
 /* Input part */
 body {
-  background-image: url("pattern_096.gif");
+  /*background-image: url("pattern_096.gif");*/
 }
 
 .form {
@@ -9,21 +9,35 @@ body {
 
 .form .button {
   display: inline-block;
-  height: 22px;
-  margin-top: 1px;
+  height: 25px;
+  margin-top: 2px;
   margin-left: 15px;
 }
 
 .button:hover {
-  background-color: #1C1C1C;
+  background-color: #003768;
   color: white;
 }
 
+.button[disabled]:hover {
+  background-color: grey;
+}
+
 .form input {
-  font-family: "Comic Sans MS";
-  color: #1C1C1C;
+  font-family: "Arial Narrow";
+  color: #003768;
   padding-left: 5px;
   padding-top: 2px;
+  padding-right: 5px;
+  margin-right: 20px;
+}
+
+.form input:hover {
+  background-color: #0C63AC;
+}
+
+.form label {
+  color: white;
 }
 
 form, .form .button {
@@ -32,18 +46,18 @@ form, .form .button {
 
 #in-data {
   width: 100%;
-  background-color: #0C63AC;
-  border-radius: 10px;
+  background-color: #00304e;
+  border-radius: 5px;
   padding: 15px;
   padding-top: 0.005em;
   padding-right: 0;
-  width: 1200px;
+  width: 1150px;
   margin: 0 auto;
 }
 
 h1 {
-  font-family: "Comic Sans MS";
-  color: #1C1C1C;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  color: white;
 }
 
 img {
@@ -57,13 +71,13 @@ h1, img {
 
 /* Contact part */
 #contacts-container {
-  width: 1200px;
+  width: 1150px;
   margin: 0 auto;
 }
 
 .oneContact {
-  border-radius: 10px;
-  background-color: #73b9e6;
+  border-radius: 5px;
+  background-color: #00304e;
   width: 275px;
   margin-left: -6px;
   display: inline-block;
@@ -86,12 +100,13 @@ h1, img {
 .contactList li {
   list-style: none;
   display: block;
-  font-family: "Comic Sans MS";
-  color: #1C1C1C;
+  font-family: "Arial Narrow";
+  color: #003768;
   padding-top: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: white;
 }
 
 .contactList li:hover {
@@ -107,3 +122,35 @@ h1, img {
 .ops-buttons .button:first-child {
   margin-left: 15px;
 }
+
+#contacts-container {
+  position: relative;
+}
+
+.error {
+  width: 200px;
+  height: 80px;
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-image: url('error.png');
+  border-radius: 5px;
+  position: absolute;
+  left: 40%;
+  top: 100px;
+  width:30%;
+  height:100px;
+  text-align:center;
+  z-index: 1000;
+  padding: 10px;
+  border: 1px solid;
+}
+
+#dismiss-button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 20px;
+}
+
